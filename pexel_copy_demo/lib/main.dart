@@ -8,6 +8,7 @@ import 'app/utils/app_router.dart';
 import 'data/utils/api_exception.dart';
 
 void main() {
+  WidgetsFlutterBinding();
   runApp(MyApp());
 }
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    FlutterCleanArchitecture.debugModeOn;
+    FlutterCleanArchitecture.debugModeOn();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
