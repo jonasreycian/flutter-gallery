@@ -41,7 +41,8 @@ class DataPhotoRepository implements PhotoRepository {
         url += "?${params.join('&')}";
       }
 
-      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...DataConstants.coreHeader});
+      final header = DataConstants();
+      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...header.coreHeader});
       _curatedPhotos = CuratedPhotos.fromJson(response);
       _logger.finest("getCuratedPhotos: successfull!");
       return _curatedPhotos;
@@ -65,7 +66,7 @@ class DataPhotoRepository implements PhotoRepository {
       }
 
       final url = '${DataConstants.getPhotoUrl}$id';
-      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...DataConstants.coreHeader});
+      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...DataConstants().coreHeader});
       _photo = Photo.fromJson(response);
       _logger.finest("getPhoto: Successful api fetch!");
       return Future.value(_photo);
@@ -100,7 +101,7 @@ class DataPhotoRepository implements PhotoRepository {
 
       url += '?${params.join('&')}';
 
-      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...DataConstants.coreHeader});
+      Map<String, dynamic> response = await HttpHelper.invokeHttp(url, RequestType.get, headers: {...DataConstants().coreHeader});
       _curatedPhotos = CuratedPhotos.fromJson(response);
       _logger.finest("searchPhoto: successfull!");
       return Future.value(_curatedPhotos);
