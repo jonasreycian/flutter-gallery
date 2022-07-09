@@ -1,1 +1,2 @@
-**generated
+**/generated_**/*.{cc,h,cmake}
+**/Generated**/*.{swift}
