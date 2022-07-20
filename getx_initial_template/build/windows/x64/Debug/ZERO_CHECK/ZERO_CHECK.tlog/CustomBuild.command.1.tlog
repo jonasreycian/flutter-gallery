@@ -1,0 +1,10 @@
+^D:\GIT\FLUTTER-GALLERY\GETX_INITIAL_TEMPLATE\BUILD\WINDOWS\CMAKEFILES\5F0AB56D00C23BEEC539D54F2676E9FE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/git/flutter-gallery/getx_initial_template/windows -BD:/git/flutter-gallery/getx_initial_template/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/git/flutter-gallery/getx_initial_template/build/windows/getx_initial_template.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
