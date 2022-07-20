@@ -1,0 +1,4 @@
+#Thu Jul 14 14:52:08 SGT 2022
+base.0=D\:\\git\\flutter-gallery\\bloc_order_demo\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
