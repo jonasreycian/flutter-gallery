@@ -1,0 +1,10 @@
+^D:\GIT\FLUTTER-GALLERY\GETX_INITIAL_TEMPLATE\BUILD\WINDOWS\CMAKEFILES\5F0AB56D00C23BEEC539D54F2676E9FE\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
